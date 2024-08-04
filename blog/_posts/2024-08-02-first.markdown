@@ -8,6 +8,7 @@ comments: true
 
 This is my blog.
 
+- Table of Contents
 {:toc .large-only}
 
 ## Header 1
