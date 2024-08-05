@@ -38,7 +38,7 @@ keywords:              [Robotics | Self-Driving Cars | Autonomous Systems Engine
 # A (square) logo for your site.
 # If provided, it will be shown at the top of the sidebar.
 # It also used by the `jekyll-seo-tag` plugin.
-logo:                  /assets/img/logo.png
+logo:                  /assets/img/site/KS_logo.svg
 
 # This should be the same author as first entry in `_data/authors.yml`.
 author:
@@ -79,7 +79,7 @@ paginate_path:         /:num/
 # Theme
 # ---------------------------------------------------------------------------------------
 
-# theme: jekyll-theme-hydejack
+theme: jekyll-theme-hydejack
 remote_theme: hydecorp/hydejack@v9
 
 
@@ -173,7 +173,7 @@ kramdown:
 
 # Setting a disqus shortname will enable the comment section on
 # pages with `comments: true` in the front matter.
-disqus:                ks
+disqus:                ks-disqus-com
 
 # Setting a tinyletter username will enable the newsletter subscription box.
 # PRO version only!
@@ -333,6 +333,8 @@ plugins:
   - jekyll-titles-from-headings
   - jekyll-include-cache
   - jekyll-last-modified-at
+  - jekyll-avatar
+
 
 
 # SEO Tag
