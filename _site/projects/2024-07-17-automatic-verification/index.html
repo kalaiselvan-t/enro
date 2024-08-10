@@ -30,9 +30,9 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
   
     
 <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Automatic verification of neural networks based object detection modules | Kalaiselvan Thangaraj</title>
+<title>Automatic Formal Specification Generation And Verification | Kalaiselvan Thangaraj</title>
 <meta name="generator" content="Jekyll v4.3.3" />
-<meta property="og:title" content="Automatic verification of neural networks based object detection modules" />
+<meta property="og:title" content="Automatic Formal Specification Generation And Verification" />
 <meta name="author" content="Kalaiselvan Thangaraj" />
 <meta property="og:locale" content="en" />
 <meta name="description" content="Master thesis project for the degree program M.Sc Autonomous Systems in colloboration with ThoughtWorks" />
@@ -45,9 +45,9 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
 <meta property="article:published_time" content="2024-07-17T00:00:00+02:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="http://localhost:4000/glowing-journey/assets/img/blog/automatic-verification-home.jpg" />
-<meta property="twitter:title" content="Automatic verification of neural networks based object detection modules" />
+<meta property="twitter:title" content="Automatic Formal Specification Generation And Verification" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Kalaiselvan Thangaraj"},"dateModified":"2024-08-05T15:53:30+02:00","datePublished":"2024-07-17T00:00:00+02:00","description":"Master thesis project for the degree program M.Sc Autonomous Systems in colloboration with ThoughtWorks","headline":"Automatic verification of neural networks based object detection modules","image":"http://localhost:4000/glowing-journey/assets/img/blog/automatic-verification-home.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/glowing-journey/projects/2024-07-17-automatic-verification/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/glowing-journey/assets/img/site/KS_logo.svg"},"name":"Kalaiselvan Thangaraj"},"url":"http://localhost:4000/glowing-journey/projects/2024-07-17-automatic-verification/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Kalaiselvan Thangaraj"},"dateModified":"2024-08-05T23:58:55+02:00","datePublished":"2024-07-17T00:00:00+02:00","description":"Master thesis project for the degree program M.Sc Autonomous Systems in colloboration with ThoughtWorks","headline":"Automatic Formal Specification Generation And Verification","image":"http://localhost:4000/glowing-journey/assets/img/blog/automatic-verification-home.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/glowing-journey/projects/2024-07-17-automatic-verification/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/glowing-journey/assets/img/site/KS_logo.svg"},"name":"Kalaiselvan Thangaraj"},"url":"http://localhost:4000/glowing-journey/projects/2024-07-17-automatic-verification/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -114,7 +114,7 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
   w._search = {
     DATA_URL: '/glowing-journey/assets/sitedata.json?no-cache',
     STORAGE_KEY: 'mini-search/glowing-journey/',
-    INDEX_KEY: 'index--2024-08-05T23:55:21+02:00',
+    INDEX_KEY: 'index--2024-08-10T12:01:58+02:00',
   };
   w._clapButton = true;
 }(window);</script>
@@ -149,7 +149,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79, 177, 186, 0.
 
 </head>
 
-<body class="no-break-layout">
+<body class="dark-mode no-break-layout">
   
 
 
@@ -220,7 +220,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79, 177, 186, 0.
   <header>
     <h1 class="post-title flip-project-title">
       
-        Automatic verification of neural networks based object detection modules
+        Automatic Formal Specification Generation And Verification
       
     </h1>
 
@@ -239,7 +239,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79, 177, 186, 0.
             <span class="ellipsis" data-tippy-content="Last modified at: 05 Aug 2024">
               <span class="sr-only">Last modified at:</span>
               <span class="icon-history"></span>
-              <time datetime="2024-08-05T15:53:30+02:00">2024-08-05</time>
+              <time datetime="2024-08-05T23:58:55+02:00">2024-08-05</time>
             </span>
           
         
@@ -259,7 +259,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79, 177, 186, 0.
     
     
   
-  alt="Automatic verification of neural networks based object detection modules"
+  alt="Automatic Formal Specification Generation And Verification"
   
   
   width="864"
@@ -289,16 +289,50 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79, 177, 186, 0.
   
     
 <ul class="large-only" id="markdown-toc">
-  <li><a href="#what-is-verification-and-validation" id="markdown-toc-what-is-verification-and-validation">What is Verification and Validation?</a></li>
+  <li><a href="#background-and-problems" id="markdown-toc-background-and-problems">Background and problems</a></li>
+  <li><a href="#goal" id="markdown-toc-goal">Goal</a></li>
 </ul>
 
-<p>Let me start by asking you this question. Do you know if the neural network you developed work as you intended? You might have used a verification dataset to check if your model has generalized well to unseen data. But is that enough to know if the neural network’s functionality is correct. What if the network is going to be deployed in a safety ctitical system like autonomous cars? It is absolutely necessary to make sure that they have correct functionality before we can deploy such systems. What can we do to make sure our network doesn’t exhibit any unintended behaviours after deployment.</p>
+<!-- Intro paragraph, what is this blog about? -->
+<p>Let me start by asking you this question. Do you know if the neural network you developed work as you intended? You might have used a verification dataset to check if your model has generalized well to unseen data. But is that enough to know if the neural network’s functionality is correct and complete? What if the network is going to be deployed in a safety ctitical system like autonomous cars? Will the usual verification dataset be enough to guarantee the functionalities? It is absolutely necessary to make sure that the software present in autonomous vehicles have no functional faults for the safety of the passengers in it.</p>
 
-<p>Automotive industry is very well regulated by both the government and industry consortiums. It follows the V-model development cycle for its systems development. One of the important processes</p>
+<h2 id="background-and-problems">Background and problems</h2>
+<!-- Safety standards and the v-model -->
+<p>Automotive industry is very well regulated by both the government and industry consortiums, to make sure safety is a priority when manufacturing vehicles. Best practices in the industry are captured in the form of safety standards. One of the most well-known safety standard is the <a href="https://www.iso.org/standard/68383.html">ISO 26262</a> which deals with the functional safety of the E/E systems of the car, including both hardware and software. It covers the overall product development lifecycle from specification, design, implementation, integration, verificationa, validation and product release. The standard follows the V-model of systems engineering process. One of the core concepts anchoring the v-model is verification and validation.</p>
 
-<h2 id="what-is-verification-and-validation">What is Verification and Validation?</h2>
+<figure class="image">
+    <img src="../../assets/img/blog/v-model.jpeg" alt="V-model of systems engineering process" />
+    <figcaption>V-model of systems engineering process</figcaption>
+  </figure>
 
-<p>This is done by a process called verification and validation.</p>
+<!-- Verification and validation, problems in AI V&V -->
+<p>Verification is the process of checking if our system is built in accordance with the given requirement and specifications. Validation is the process of checking if the specified requirements meet the needs of the intended task or the customer. In other words, verification is answering the question, “Are we building the product right?” and validation answers the question “Are we building the right product?”. Verification and Validation (V&amp;V) plays an important role in assessing safety and building trust in a system. Currently available methods for V&amp;V fall short when it comes to software systems with AI in it. And the contribution of AI in cars are constantly increasing from smart climate control to powering the autonomous driving functionality.</p>
+
+<!-- Problems -->
+<p>About 90% of all road accidents are attributed to human error and automating the driving task itself can save many lifes. The task of replacing the driver with an automated system is not easy. Automakers need to be sure themselves and prove it to their customers that they can trust the vehicle with their lives. Current industry practice in testing the functionality of the vehicle is conduct extensive testing in simulations and in real world. The problem with this approach is that this approach is very resource intensive. According to this <a href="https://www.rand.org/content/dam/rand/pubs/research_reports/RR1400/RR1478/RAND_RR1478.pdf">research</a> it would take hundreds of millions of miles and sometimes hundreds of billions of miles for a autonomous vehicle to demonstrate their performance in terms of fatalities and injuries. How long would it take to complete all these miles before a self-driving technology can hit the roads. As it stands, about 90% of the self-driving problem is already solved but we can’t guarantee that it will be safe in all driving conditions. Developers of these technologies make sure to collect diverse data and train their system on it to make sure they perform equally well in all situations.</p>
+
+<p>We need better methods that can complement simulation-based and real-world testing. Formal methods seems to be promising in that area with their ability to provide us with mathematical proofs which can eliminate the need for extensive testing. As most of the researchers are concentrating in developing the technology that makes the cars drive themselves, I decided to work on methods to verify if they are safe for my masters thesis. Perception is usually the bottleneck for autonomous driving technology, as it affects all other systems in a chain reaction. Several works in verifying the perception systems exist and they mostly focus on verifing if the perception system is robust to input changes. Very little works exist in trying to verifying the functionality of the perception systems. For example, did an object detection module classify an object as a car based on the right reasons? Did it learn to recognize a car correctly? These are some of the questions we would be interested in verifying.</p>
+
+<h2 id="goal">Goal</h2>
+<p>On investigating why verification is hard for AI-based systems, the following problems were found.</p>
+
+<p><strong>1. AI is a blackbox</strong> <br />
+Neural networks are often used in perception systems for object detection and tracking. They are opaque systems, meaning their decision making process is not seen. This makes functional verification difficult. Explainable AI, a whole new field has emerged to develop AI systems that are explainable, which would make the verification process much easier.</p>
+
+<p><strong>2. Validatity of verification</strong> <br />
+As mentioned earlier, AI systems are usually verified using simulation-based testing and real-world testing. But the validity of those verification becomes obsolete when the model is updated. All the situations that was driven in simulations and in real-world needs to be driven again to make sure the system performs well after the changes. We would need automation tools that will automatically verify and validate these systems when updated. Such automatic tools in combination with formal methods based verification can verify the systems effectively and much faster. Today, there are not many tools that are capable of continuous verification.</p>
+
+<p><strong>3. Lack of formal specifications</strong> <br />
+Verification is the process of checking if our system is built in accordance with the given requirements and specifications. For it to be effective, we need to set correct set of requirements for the system. For effective formal verification, the specifications used to verify also needs to be specified formally. They are called as formal specifications. Now the problem is, how will we formally specify the expected behaviour of a perception system. For example, let’s say our system needs to correctly identify and classify all pedestrians on the road. How will we specify this requirement formally?</p>
+
+<p>The goal of this thesis is to contribute towards solving all of these issues in such a way that the autonomous vehicles homologation process is improved. To that end, a framework was created that will continuously verify neural network based object detection modules. The framework takes in an ontology of the world in which the model is going to be deployed. Eg: An ontology that models all the objects that a car might encounter in its driving environments. The framework parses the ontology and creates syntactically and semantically correct formal specifications in a language called Conspec. For verification, the framework uses a VLM (CLIP) to verify if the model satisfies the generated Conspec specifications.</p>
+
+<p>You can read more about my thesis here <br /></p>
+
+<p><a href="/glowing-journey/assets/files/thangaraj_kalaiselvan_thesis.pdf">thesis.pdf</a></p>
+
+<p><br />
+<br /></p>
 
 <div id="disqus_thread"></div>
 <script>
@@ -370,11 +404,8 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79, 177, 186, 0.
     About
   </h2>
 
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-
-<p>Open <code class="language-plaintext highlighter-rouge">_data/authors.yml</code> to edit this text.</p>
+  <p>Hi, I’m Kalaiselvan, an autonomous systems engineer with a background in M.Sc Autonomous Systems. My work and interests revolve around robotics, autonomous vehicles, innovation, and entrepreneurship.
+I’m passionate about exploring the technologies that are driving the future of automation and intelligent systems.</p>
 
 
   <div class="sidebar-social">
@@ -466,18 +497,6 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
   
 
   
-  
-
-  
-    
-
-
-  
-
-  
-  
-
-  
     
 <aside class="comments related" role="complementary">
   <h2 class="hr-bottom">Comments</h2>
@@ -505,7 +524,6 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
   }
 }(window, document);</script>
 
-
 </aside>
 
 
@@ -516,7 +534,7 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
 <footer class="content" role="contentinfo">
   <hr/>
   
-    <p><small class="copyright">© 2024. All rights reserved.
+    <p><small class="copyright">_KS
 </small></p>
   
   
@@ -553,11 +571,6 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
     <a class="sidebar-title" href="/glowing-journey/"><h2 class="h1">Kalaiselvan Thangaraj</h2></a>
     
     
-      <p class="">
-        Autonomous Systems Engineer
-
-      </p>
-    
   </div>
 
   <nav class="sidebar-nav heading" role="navigation">
@@ -574,6 +587,18 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
           
         >
           About
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/glowing-journey/blog/"
+          class="sidebar-nav-item "
+          
+        >
+          Blog
         </a>
       </li>
     
