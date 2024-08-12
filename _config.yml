@@ -9,7 +9,7 @@
 # When your site is in a subdirectory, set to `/<name of directory>`,
 # with a leading `/` but no trailing `/`. Use the empty string '' otherwise.
 # NOTE: You don't need to provide this property when hosting on GitHub Pages or Netlify.
-baseurl:               '/glowing-journey'
+baseurl:               '/enro'
 
 
 # General settings
@@ -177,7 +177,7 @@ kramdown:
 
 # Setting a disqus shortname will enable the comment section on
 # pages with `comments: true` in the front matter.
-disqus:                ks-disqus-com
+# disqus:                ks-disqus-com
 
 # Setting a tinyletter username will enable the newsletter subscription box.
 # PRO version only!
@@ -191,7 +191,7 @@ disqus:                ks-disqus-com
 hydejack:
   # Configure the order of complementary content on blog posts
   # post_addons:         [about, newsletter, related, random, comments]
-  post_addons:         [about, comments]
+  post_addons:         [about, comments, related]
 
   # Configure the order of complementary content on project pages
   # project_addons:      [about, newsletter, other, comments]

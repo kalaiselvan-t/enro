@@ -53,7 +53,7 @@ You can read more about my thesis here <br>
 <br>
 <br>
 
-{% if page.comments %}
+<!-- {% if page.comments %}
 <div id="disqus_thread"></div>
 <script>
     /**
@@ -73,4 +73,4 @@ You can read more about my thesis here <br>
     })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-{% endif %}
+{% endif %} -->
