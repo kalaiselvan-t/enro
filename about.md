@@ -12,6 +12,7 @@ redirect_from:
 
 <!--author-->
 
+[My CV](assets/files/Kalaiselvan_CV_Single_Page.pdf)
 ## Work Experience
 
 
