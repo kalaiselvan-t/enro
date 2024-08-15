@@ -8,18 +8,6 @@ description: >
 comments: true
 ---
 
-<!-- 
-Structure of the project page
-
-1. What is this project about?
-2. Give background and other necessary information
-3. Explain the goal of the project and the methods used
-4. Explain the method
-5. Explain the result
-6. Explain the advantages and disadvantages
-7. Conclusion
- -->
-
  {:.lead}
 
 - Table of Contents
