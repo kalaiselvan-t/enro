@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:4000/enro/projects/2024-05-10-distributed-state-estimation/</loc>
+<loc>http://localhost:4000/https://kalaiselvan-t.github.io/projects/2024-05-10-distributed-state-estimation/</loc>
 <lastmod>2024-08-15T02:46:17+02:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/enro/projects/2024-07-17-automatic-verification/</loc>
+<loc>http://localhost:4000/https://kalaiselvan-t.github.io/projects/2024-07-17-automatic-verification/</loc>
 <lastmod>2024-08-12T15:12:54+02:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/enro/about/</loc>
-<lastmod>2024-08-15T02:50:50+02:00</lastmod>
+<loc>http://localhost:4000/https://kalaiselvan-t.github.io/about/</loc>
+<lastmod>2024-08-15T12:02:24+02:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/enro/abt/</loc>
+<loc>http://localhost:4000/https://kalaiselvan-t.github.io/abt/</loc>
 <lastmod>2024-08-15T02:41:34+02:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/enro/</loc>
+<loc>http://localhost:4000/https://kalaiselvan-t.github.io/</loc>
 <lastmod>2024-08-12T15:12:54+02:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/enro/posts/</loc>
+<loc>http://localhost:4000/https://kalaiselvan-t.github.io/posts/</loc>
 <lastmod>2024-08-02T10:18:25+02:00</lastmod>
 </url>
 </urlset>
