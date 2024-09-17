@@ -42,7 +42,6 @@ University of Trento, Italy
 
 Kumaraguru College of Technology, India
 
-## Now
 <!-- 
 ### Core Competencies -->
 
